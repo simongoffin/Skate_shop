@@ -1,0 +1,8 @@
+<openerp>
+    <data>
+        <record id="first_skate" model="skateshop.skate">
+            <field name="name">First skate</field>
+            <field name="description">This is a good skate</field>
+        </record>
+    </data>
+</openerp>
