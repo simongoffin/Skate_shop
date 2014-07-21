@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!-- skate form view -->
+        <record model="ir.ui.view" id="skate_form_view">
+            <field name="name">skate.form</field>
+            <field name="model">skateshop.skate</field> 
+            <field name="arch" type="xml">
+                <form string="Skate Form">
+                    <field name="name" colspan="4" />
+                    <notebook colspan="4">
+                        <page string="Description">
+                            <field name="description" colspan="4" nolabel="1" />
+                        </page>
+                        <page string="About">
+                            <label string="This is an example of notebooks" /> 
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+        <!-- skate tree view -->
+        <record model="ir.ui.view" id="course_tree_view"> 
+            <field name="name">skate.tree</field>
+            <field name="model">skateshop.skate</field> 
+            <field name="arch" type="xml">
+                <tree string="Skate Tree">
+                    <field name="name" />
+                    <field name="description" /> 
+                </tree>
+            </field>
+        </record>
+        <!-- skate search view -->
+        <record model="ir.ui.view" id="skate_search">
+            <field name="name">skate.search</field>
+            <field name="model">skateshop.skate</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Skate Search">
+                    <filter name="my_skates" domain="[('responsible_id','=',uid)]"
+                        string="My Skates" icon="terp-partner"/>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>

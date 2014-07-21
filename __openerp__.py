@@ -6,6 +6,7 @@
     'data': [
         'views/menu.xml',
         'security/ir.model.access.csv',
+        'views/skate_view.xml',
     ],
     'depends': ['base'],
 }
