@@ -1,0 +1,2 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_skateshop_skate,access_skateshop_skate,model_skateshop_skate,,1,1,1,1

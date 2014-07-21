@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="skate_list_action"> 
+            <field name="name">Skate</field>
+            <field name="res_model">skateshop.skate</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,graph</field> 
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first skate</p> </field>
+        </record>
+        
+        <menuitem id="main_skate_menu" name="Skate shop" />
+        <menuitem id="shop_menu" name="Shop" parent="main_skate_menu" />
+        <menuitem id="skate_menu" name="Skate" parent="shop_menu"
+            action="skate_list_action" />
+
+    </data>
+</openerp>
