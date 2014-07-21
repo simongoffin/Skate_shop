@@ -9,7 +9,8 @@
                 <form string="Skate Form">
                     <field name="name" colspan="4" />
                     <notebook colspan="4">
-                        <page string="Prix" colspan="4" >
+                        <page string="Proprietaire et Prix" colspan="4" >
+                            <field name="proprietaire_id" colspan="4"/>
                             <field name="prix"/>
                         </page>
                         <page string="Description">
@@ -23,12 +24,13 @@
             </field>
         </record>
         <!-- skate tree view -->
-        <record model="ir.ui.view" id="course_tree_view"> 
+        <record model="ir.ui.view" id="skate_tree_view"> 
             <field name="name">skate.tree</field>
             <field name="model">skateshop.skate</field> 
             <field name="arch" type="xml">
                 <tree string="Skate Tree">
                     <field name="name" />
+                    <field name="proprietaire_id" />
                     <field name="prix" />
                     <field name="description" /> 
                 </tree>

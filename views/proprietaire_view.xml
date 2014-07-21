@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!-- skate form view -->
+        <record model="ir.ui.view" id="proprietaire_form_view">
+            <field name="name">proprietaire.form</field>
+            <field name="model">skateshop.proprietaire</field> 
+            <field name="arch" type="xml">
+                <form string="Proprietaire Form">
+                    <field name="name" colspan="4" />
+                    <field name="skate_ids" colspan="4" />
+                </form>
+            </field>
+        </record>
+        <!-- skate tree view -->
+        <record model="ir.ui.view" id="proprietaire_tree_view"> 
+            <field name="name">proprietaire.tree</field>
+            <field name="model">skateshop.proprietaire</field> 
+            <field name="arch" type="xml">
+                <tree string="Proprietaire Tree">
+                    <field name="name" />
+                    <field name="skate_ids" />
+                </tree>
+            </field>
+        </record>
+    </data>
+</openerp>

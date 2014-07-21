@@ -9,5 +9,7 @@ class Skate(osv.Model):
         'name' : fields.char(string="Title", size=256, required=True),
         'prix' : fields.integer(string="Prix"),
         'description' : fields.text(string="Description"),
+        #Relational
+        'proprietaire_id' : fields.many2one('skateshop.proprietaire',ondelete='cascade', string="Proprietaire", required=True),
     }
     

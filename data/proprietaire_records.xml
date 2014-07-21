@@ -1,0 +1,7 @@
+<openerp>
+    <data>
+        <record id="first_proprietaire" model="skateshop.proprietaire">
+            <field name="name">Simon Goffin</field>
+        </record>
+    </data>
+</openerp>

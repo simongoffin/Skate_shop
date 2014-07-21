@@ -10,9 +10,20 @@
                 <p class="oe_view_nocontent_create">Create the first skate</p> </field>
         </record>
         
+        <record model="ir.actions.act_window" id="proprietaire_list_action"> 
+            <field name="name">Proprietaire</field>
+            <field name="res_model">skateshop.proprietaire</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field> 
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first proprietaire</p> </field>
+        </record>
+        
         <menuitem id="main_skate_menu" name="Skate shop" />
         <menuitem id="shop_menu" name="Shop" parent="main_skate_menu" />
         <menuitem id="skate_menu" name="Skate" parent="shop_menu"
             action="skate_list_action" />
+        <menuitem id="proprietaire_menu" name="Proprietaire" parent="shop_menu"
+            action="proprietaire_list_action" />
     </data>
 </openerp>

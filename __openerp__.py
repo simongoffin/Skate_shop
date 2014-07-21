@@ -8,6 +8,8 @@
         'security/ir.model.access.csv',
         'views/skate_view.xml',
         'data/skate_records.xml',
+        'views/proprietaire_view.xml',
+        'data/proprietaire_records.xml',
     ],
     'depends': ['base'],
 }
