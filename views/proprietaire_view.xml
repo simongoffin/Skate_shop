@@ -21,6 +21,7 @@
                 <tree string="Proprietaire Tree">
                     <field name="name" />
                     <field name="skate_ids" />
+                    <field name="montant" />
                 </tree>
             </field>
         </record>
