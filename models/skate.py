@@ -7,6 +7,7 @@ class Skate(osv.Model):
     
     _columns = {
         'name' : fields.char(string="Title", size=256, required=True),
+        'prix' : fields.integer(string="Prix"),
         'description' : fields.text(string="Description"),
     }
     
