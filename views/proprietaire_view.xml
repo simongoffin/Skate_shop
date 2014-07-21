@@ -9,6 +9,7 @@
                 <form string="Proprietaire Form">
                     <field name="name" colspan="4" />
                     <field name="skate_ids" colspan="4" />
+                    <field name="montant" colspan="4" />
                 </form>
             </field>
         </record>
