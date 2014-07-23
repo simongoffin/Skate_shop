@@ -10,6 +10,7 @@
         'data/skate_records.xml',
         'views/proprietaire_view.xml',
         'data/proprietaire_records.xml',
+        'views/inherit_view.xml',
     ],
     'depends': ['base'],
 }

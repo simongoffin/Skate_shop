@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!-- skate tree view -->
+        <record model="ir.ui.view" id="proprietaire_tree_view_inherited"> 
+            <field name="name">proprietaire.tree</field>
+            <field name="model">skateshop.proprietaire</field> 
+            <field name="inherit_id" ref="proprietaire_tree_view"/>
+            <field name="arch" type="xml">
+                <!-- find field name, and insert field name before it -->
+                <field name="name" position="before">
+                    <field name="name" string="Nom heritage"/>
+                </field>
+                <!-- find field montant inside tree, and add the field montant after it -->
+                <xpath expr="/tree/field[@name='montant']" position="after">
+                    <field name="montant" string="Montant heritage"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
