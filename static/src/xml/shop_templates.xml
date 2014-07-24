@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+    <t t-name="MyTemplate">
+        <div class="shop_homepage">
+            <p>Hello <t t-esc="widget.name"/>!</p>
+        </div>
+    </t>
+</templates>

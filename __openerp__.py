@@ -11,6 +11,8 @@
         'views/proprietaire_view.xml',
         'data/proprietaire_records.xml',
         'views/inherit_view.xml',
+        'views/shop_assets.xml',
     ],
     'depends': ['base'],
+    'qweb':['static/src/xml/*.xml'],
 }

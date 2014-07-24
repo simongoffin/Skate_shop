@@ -25,5 +25,12 @@
             action="skate_list_action" />
         <menuitem id="proprietaire_menu" name="Proprietaire" parent="shop_menu"
             action="proprietaire_list_action" />
+            
+        <record model="ir.actions.client" id="action_client_example">
+            <field name="name">Shop</field>
+            <field name="tag">example.action</field>
+        </record>
+        
+        <menuitem action="action_client_example" id="menu_client_example"/>
     </data>
 </openerp>
