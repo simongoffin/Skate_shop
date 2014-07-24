@@ -12,8 +12,12 @@ openerp.skate_shop = function(instance) {
             this.name = "Simon";
         },
         start: function() {
-        },
+            $("button").click(function() {
+                console.log("someone clicked on the button");});
+            },
     });
 
     instance.web.client_actions.add('example.action', 'instance.skate_shop.action');
-}
+
+    
+};

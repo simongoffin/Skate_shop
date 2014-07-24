@@ -4,6 +4,9 @@
     <t t-name="MyTemplate">
         <div class="shop_homepage">
             <p>Hello <t t-esc="widget.name"/>!</p>
+            <p class="rpc_request">
+                <button type="button">Request</button>
+            </p>
         </div>
     </t>
 </templates>
