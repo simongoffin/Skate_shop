@@ -16,7 +16,7 @@ openerp.skate_shop = function(instance) {
                 console.log("someone clicked on the button");
                 
                 openerp.jsonRpc( '/request_rpc', 'call', 
-                {'id': +'11'})
+                {'prix': '40'})
                 .then(function (result) {
                     console.log(result);
                 })
