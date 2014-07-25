@@ -15,14 +15,18 @@ openerp.skate_shop = function(instance) {
             $("button").click(function() {
                 console.log("someone clicked on the button");
                 
+                var id_seq=$("main").html();
+                
+                console.log(id_seq);
+                
                 openerp.jsonRpc( '/request_rpc', 'call', 
-                {'prix': '40'})
+                {'prix': '40','id_seq' : id_seq})
                 .then(function (result) {
                     console.log(result);
                 })
                 
-            
             });
+            
                 
             },
     });

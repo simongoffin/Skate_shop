@@ -6,6 +6,9 @@
             <p>Hello <t t-esc="widget.name"/>!</p>
             <p class="rpc_request">
                 <button type="button">Request</button>
+                <main>
+                    <div data-oe-id="283">OK!</div>
+                </main>
             </p>
         </div>
     </t>
