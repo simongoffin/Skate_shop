@@ -13,7 +13,36 @@ openerp.skate_shop = function(instance) {
         },
         start: function() {
             $("button").click(function() {
-                console.log("someone clicked on the button");});
+                console.log("someone clicked on the button");
+                
+                
+                
+                var def1 = $.ajax("/service_plus", {
+                    type: "POST",
+                    dataType: "json",
+                    data: JSON.stringify({
+                        "a": 3,
+                        "b": 5,
+                    }),
+                    contentType: "application/json",
+                });
+
+                var def2 = $.ajax("/service_plus", {
+                    type: "POST",
+                    dataType: "json",
+                    data: JSON.stringify({
+                        "a": 6,
+                        "b": 7,
+                    }),
+                    contentType: "application/json",
+                });
+
+                $.when(def1, def2).then(function(result1, result2) {
+                    console.log("3+5=", result1[0].addition);
+                    console.log("6+7=", result2[0].addition);
+                });
+                
+                });
             },
     });
 
