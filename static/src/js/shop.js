@@ -15,9 +15,11 @@ openerp.skate_shop = function(instance) {
             $("button").click(function() {
                 console.log("someone clicked on the button");
                 
-                openerp.session.rpc('/web_graph/check_xlwt').then(function (result) {
+                openerp.jsonRpc( '/request_rpc', 'call', 
+                {'id': +'11'})
+                .then(function (result) {
                     console.log(result);
-                });
+                })
                 
             
             });
