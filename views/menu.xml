@@ -32,5 +32,6 @@
         </record>
         
         <menuitem action="action_client_example" id="menu_client_example"/>
+        
     </data>
 </openerp>

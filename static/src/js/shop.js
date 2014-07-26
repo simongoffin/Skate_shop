@@ -12,6 +12,8 @@ openerp.skate_shop = function(instance) {
             this.name = "Simon";
         },
         start: function() {
+            var wid=new instance.skate_shop.MyWidget(this);
+            wid.appendTo(this.$el);
             $("button").click(function() {
                 console.log("someone clicked on the button");
                 
@@ -30,8 +32,29 @@ openerp.skate_shop = function(instance) {
                 
             },
     });
-
+    
     instance.web.client_actions.add('example.action', 'instance.skate_shop.action');
+    
+    instance.skate_shop.MyWidget = instance.web.Widget.extend({
+        
+        init: function(parent) {
+            this._super(parent);
+        },
+        
+        start: function() {
+            console.log('Ready!');
+        
+            $("#my_button").click(function() {
+                console.log("You just clicked!");
+            });
+        },
+    });
+    
+    $(document).ready(function() {
+        var content = new instance.skate_shop.MyWidget();
+        content.setElement($('.myclass'));
+        content.start();
+    });
 
     
 };
