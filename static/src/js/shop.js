@@ -30,31 +30,48 @@ openerp.skate_shop = function(instance) {
             });
             
                 
-            },
+        },
+        
+        events: {
+            "click .ici": "button_just_clicked",
+            "click .my_class": "button_just_clicked",
+        },
+        
+        button_just_clicked: function() {
+            console.log('Fourth way!');
+        },
+        
     });
     
     instance.web.client_actions.add('example.action', 'instance.skate_shop.action');
     
     instance.skate_shop.MyWidget = instance.web.Widget.extend({
-        
         init: function(parent) {
             this._super(parent);
         },
         
         start: function() {
+            var self=this;
             console.log('Ready!');
-        
+            
             $("#my_button").click(function() {
-                console.log("You just clicked!");
+                console.log("First way!");
+                self.button_clicked();
+            });
+            
+            $("#my_button").click(function() {
+                console.log("Third way!");
             });
         },
+        
+        button_clicked: function() {
+            console.log('Second way!');
+        },
+        
+
     });
     
-    $(document).ready(function() {
-        var content = new instance.skate_shop.MyWidget();
-        content.setElement($('.myclass'));
-        content.start();
-    });
+    
 
     
 };

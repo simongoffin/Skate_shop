@@ -4,7 +4,7 @@
 
     <t t-extend="MyTemplate">
         <t t-jquery=".shop_homepage" t-operation="after">
-            <button data-action="previous" type="submit" class="myclass" id="my_button">Press</button>
+            <button type="button" class="my_class" id="my_button">Press</button>
         </t>
     </t>
 </templates>
