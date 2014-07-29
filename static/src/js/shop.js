@@ -10,10 +10,11 @@ openerp.skate_shop = function(instance) {
         init: function(parent) {
             this._super(parent);
             this.name = "Simon";
+            this.products = ["Birdhouse", "Blind", "Flip", "Atm", "Element"];
         },
         start: function() {
             var wid=new instance.skate_shop.MyWidget(this);
-            wid.appendTo(this.$el);
+            wid.appendTo($('.my_class'));
             $("button").click(function() {
                 console.log("someone clicked on the button");
                 
@@ -71,7 +72,21 @@ openerp.skate_shop = function(instance) {
 
     });
     
+    instance.skate_shop.box = instance.web.Widget.extend({
+        init: function(parent) {
+            this._super(parent);
+        },
+        
+        start: function() {
+            var self=this;
+            console.log('Ready!');
+            
+            $("#my_button").click(function() {
+                console.log("This is the solution!");
+            });
+        },
+        
+    });
     
-
     
 };

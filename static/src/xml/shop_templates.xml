@@ -11,5 +11,13 @@
                 </main>
             </p>
         </div>
+        <div>
+            <t t-foreach="widget.products" t-as="product">
+                <span class="products_item">
+                    <t t-esc="product"/>
+                </span>
+                <br/>
+            </t>
+        </div>
     </t>
 </templates>
