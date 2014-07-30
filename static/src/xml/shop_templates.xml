@@ -20,4 +20,14 @@
             </t>
         </div>
     </t>
+    <t t-name="template_test">
+        <div>
+            <t t-foreach="mytab" t-as="item">
+                <span class="products_item">
+                    <t t-esc="item"/>
+                </span>
+                <br/>
+            </t>
+        </div>
+    </t>
 </templates>

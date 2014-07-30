@@ -20,7 +20,11 @@ openerp.skate_shop = function(instance) {
                 
                 var id_seq=$("main").html();
                 
-                console.log(id_seq);
+                console.log(id_seq)
+                
+//                 location.reload().then(function(){
+//                     $( ".shop_homepage" ).append( "<p>Test</p>" );
+//                 })
                 
 //                 openerp.jsonRpc( '/request_rpc', 'call', 
 //                 {'prix': '40','id_seq' : id_seq})
@@ -49,6 +53,7 @@ openerp.skate_shop = function(instance) {
     instance.skate_shop.MyWidget = instance.web.Widget.extend({
         init: function(parent) {
             this._super(parent);
+            this.tab=[];
         },
         
         start: function() {
@@ -67,7 +72,9 @@ openerp.skate_shop = function(instance) {
                 {})
                 .then(function (result) {
                     console.log(result);
-                })
+                    this.tab=result;
+                    $( ".shop_homepage" ).append(QWeb.render("template_test", {mytab:result}));
+            });
         },
         
 
