@@ -23,12 +23,19 @@ class TableExporter(http.Controller):
         
     @http.route(['/request_rpc'], type='json', auth="public", website=True)
     def publish(self, prix,id_seq):
-        #from pudb import set_trace; set_trace()
+        from pudb import set_trace; set_trace()
         cr, uid, context = request.cr, openerp.SUPERUSER_ID, request.context
         #iuv = request.registry['ir.ui.view']
         print get_id(id_seq)
         mymodel=request.registry["skateshop.skate"]
-        mimetype ='application/xml;charset=utf-8'
         result=mymodel.search(cr, uid, [
             ('prix', '=', int(prix)),],context=request.context)
+        return result
+
+    @http.route(['/list_skates'], type='json', auth="public", website=True)
+    def publish(self):
+        #from pudb import set_trace; set_trace()
+        cr, uid, context = request.cr, openerp.SUPERUSER_ID, request.context
+        mymodel=request.registry["skateshop.skate"]
+        result=mymodel.search(cr, uid, [], offset=0, limit=None, order=None, context=None, count=False)
         return result
