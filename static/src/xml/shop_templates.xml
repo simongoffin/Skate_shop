@@ -14,7 +14,7 @@
         <div>
             <t t-foreach="widget.products" t-as="product">
                 <span class="products_item">
-                    <t t-esc="product"/>
+                    <li><a t-attf-href="/get_product/#{ product }" ><t t-esc="product"/></a></li>
                 </span>
                 <br/>
             </t>

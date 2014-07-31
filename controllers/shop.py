@@ -39,3 +39,8 @@ class TableExporter(http.Controller):
         mymodel=request.registry["skateshop.skate"]
         result=mymodel.search(cr, uid, [], offset=0, limit=None, order=None, context=None, count=False)
         return result
+        
+    @http.route(['/get_product/<value>'], type='http', auth="public", website=True)
+    def get_version(self,value):
+        print 'ID={}'.format(value)
+        return value
