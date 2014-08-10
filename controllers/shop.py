@@ -22,11 +22,10 @@ class TableExporter(http.Controller):
         return "RPC ok!"
         
     @http.route(['/request_rpc'], type='json', auth="public", website=True)
-    def publish(self, prix,id_seq):
-        from pudb import set_trace; set_trace()
+    def publish_prix(self, prix):
+        #from pudb import set_trace; set_trace()
         cr, uid, context = request.cr, openerp.SUPERUSER_ID, request.context
         #iuv = request.registry['ir.ui.view']
-        print get_id(id_seq)
         mymodel=request.registry["skateshop.skate"]
         result=mymodel.search(cr, uid, [
             ('prix', '=', int(prix)),],context=request.context)
